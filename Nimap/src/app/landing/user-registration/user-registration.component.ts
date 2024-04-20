@@ -23,6 +23,7 @@ export class UserRegistrationComponent {
     
   }
   
+  
   getData(){
   this.employeeForm=this.fb.group({
     fname:[this.ediData?this.ediData[0]?.fname:'',[Validators.required]],
@@ -39,4 +40,11 @@ export class UserRegistrationComponent {
   }
 
   
+  // var slider = document.getElementById("ageSlider");
+  // var output = document.getElementById("ageValue");
+  // output.innerHTML = slider.value;
+
+  // slider.oninput = function() {
+  //   output.innerHTML = this.value;
+  // }
 }
