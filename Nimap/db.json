@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "fname": "hghgh",
+      "lname": "",
+      "email": "",
+      "contact": "",
+      "age": "",
+      "state": "",
+      "country": "",
+      "addr": "",
+      "tags": "bb",
+      "id": 2
+    },
+    {
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "contact": "",
+      "age": "",
+      "state": "",
+      "country": "",
+      "addr": "nbnb",
+      "tags": "",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

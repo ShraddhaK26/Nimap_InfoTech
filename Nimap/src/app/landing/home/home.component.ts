@@ -15,8 +15,8 @@ export class HomeComponent {
 
   openDialog(){
     this.dialog.open(UserRegistrationComponent,{
-      width:'60px',
-      height:'400px',
+      width:'800px',
+      height:'700px',
       data:{},
     })
   }
