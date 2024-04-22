@@ -2,10 +2,10 @@
   "user": [
     {
       "img": "C:\\fakepath\\IMG_0590.JPG",
-      "fName": "dnyaneshwar",
-      "lName": "gavade",
-      "email": "dnyaneshwarg163@gmail.com",
-      "contact": "8767683058",
+      "fName": "Shraddha",
+      "lName": "Kupekar",
+      "email": "shraddha@gmail.com",
+      "contact": "7058555116",
       "age": 30,
       "state": "MH",
       "country": "india",
@@ -20,8 +20,8 @@
         "address2": "pune"
       },
       "companyAddress": {
-        "comAdd1": null,
-        "comAdd2": null
+        "comAdd1": "TATA",
+        "comAdd2": "capgemini"
       },
       "id": 1
     }
