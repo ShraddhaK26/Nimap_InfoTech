@@ -1,43 +1,30 @@
 {
-  "posts": [
+  "user": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "fname": "hghgh",
-      "lname": "",
-      "email": "",
-      "contact": "",
-      "age": "",
-      "state": "",
-      "country": "",
-      "addr": "",
-      "tags": "bb",
-      "id": 2
-    },
-    {
-      "fname": "",
-      "lname": "",
-      "email": "",
-      "contact": "",
-      "age": "",
-      "state": "",
-      "country": "",
-      "addr": "nbnb",
-      "tags": "",
-      "id": 3
+      "img": "C:\\fakepath\\IMG_0590.JPG",
+      "fName": "dnyaneshwar",
+      "lName": "gavade",
+      "email": "dnyaneshwarg163@gmail.com",
+      "contact": "8767683058",
+      "age": 30,
+      "state": "MH",
+      "country": "india",
+      "address": "home",
+      "chips": [
+        "ram",
+        "sham",
+        "chens"
+      ],
+      "homeAddress": {
+        "address1": "katraj",
+        "address2": "pune"
+      },
+      "companyAddress": {
+        "comAdd1": null,
+        "comAdd2": null
+      },
+      "id": 1
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    
+  ]
 }

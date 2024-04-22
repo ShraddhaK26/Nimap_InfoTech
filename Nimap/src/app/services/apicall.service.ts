@@ -6,14 +6,27 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApicallService {
-  url="http://localhost:3000"
-  
-  
-  
-  constructor(private httpClient: HttpClient) { }
 
-  postApiCall(endPoint: any, formData: any) {
-    let url = this.url + '/' + endPoint;
-    return this.httpClient.post(url, formData)
+  editId:any
+  url='http://localhost:3000/user'
+  
+  
+  
+
+
+  constructor(public http:HttpClient) { }
+  postApiCAll(data:any){
+   return this.http.post(this.url,data)
   }
+
+
+  getApiCall(){
+    return this.http.get(this.url)
+  }
+
+patchApi(id:any,body:any){
+ let url=this.url+'/'+id
+  return this.http.patch(url,body)
+}
+
 }

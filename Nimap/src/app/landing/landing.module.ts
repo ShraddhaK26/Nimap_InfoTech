@@ -17,6 +17,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../app-routing.module';
+import {MatChipsModule} from '@angular/material/chips';
+import { BrowserModule } from '@angular/platform-browser';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -45,6 +49,15 @@ import { HttpClientModule } from '@angular/common/http';
    
     MatFormFieldModule,
     HttpClientModule,
+
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatChipsModule,
+    MatSliderModule
+   
   ]
 })
 export class LandingModule { }

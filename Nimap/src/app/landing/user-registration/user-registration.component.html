@@ -1,138 +1,144 @@
+
+
+<br> <br> <br>
 <div class="main">
-  <h3>Register</h3>
+  <form [formGroup]="registerFormData" >
+  <h3 class="Register">Register   <span class="exit" (click)="exit()">X</span></h3>
+ 
   <div class="container">
-    <form [formGroup]="employeeForm">
-      <div class="row">
-        <div class="col-md-4">
-          <img src="../../assets/images/girl.png" style="height: 200px; width: 160px; margin-top: 25px;">
-          <a type="file" href="">upload your photo</a>
-        </div>
-        <div class="col-md-8 my-4">
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <div data-mdb-input-init class="form-outline">
-                <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="fname"
-                  placeholder="First Name" />
-                  <span class="err" *ngIf="employeeForm.get('fname')?.errors?.['required']">Enter First Name</span>
-                  <span class="err" *ngIf="employeeForm.get('fname')?.errors?.['maxlength']">Maximum 20 Character only</span>
-                  <span class="err" *ngIf="!employeeForm.get('fname')?.errors?.['maxlength'] && employeeForm.get('fname')?.errors?.['pattern']">Only Character Allowed</span>
-                    
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div data-mdb-input-init class="form-outline">
-                <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="lname"
-                  placeholder="Last Name" />
-                  <span class="err" *ngIf="employeeForm.get('lname')?.errors?.['required']">Enter Last Name</span>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="upload-container">
 
-              </div>
-            </div>
-          </div>
+          <img src="../../assets/images/girl.png" *ngIf="!imageUrl"  class="image-preview"  height="310" width="325" >
+          <img *ngIf="imageUrl" [src]="imageUrl"  class="image-preview" height="310" width="325" />
+     
+          
 
 
-
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" class="form-control form-control-lg" formControlName="email" placeholder="Email" />
-            <span class="err" *ngIf="employeeForm.get('email')?.errors?.['required']">Enter Email </span>
-
-          </div>
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" class="form-control form-control-lg" formControlName="contact"
-              placeholder="(541) 754-3010" />
-              <span class="err" *ngIf="employeeForm.get('contact')?.errors?.['required']">Enter Contact</span>
-
-          </div>
-          <div data-mdb-input-init>
-            <label for="customRange2" class="form-label">Age</label>
-            <input type="range" class="form-range" min="20" placeholder="Age" formControlName="age" max="60">
-            <span class="err" *ngIf="employeeForm.get('age')?.errors?.['required']">Enter age</span>
-
-          </div>
-
-          <mat-form-field style="width: 370px;">
-            <mat-label>Select your State</mat-label>
-            <mat-select formControlName="state">
-              <mat-option selected data-mdb-select-init>State</mat-option>
-              <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
-              <mat-option value="Arunachal Pradesh">Arunachal Pradesh</mat-option>
-              <mat-option value="Assam">Assam</mat-option>
-              <mat-option value="Bihar">Bihar</mat-option>
-              <mat-option value="Chhattisgarh">Chhattisgarh</mat-option>
-              <mat-option value="Goa">Goa</mat-option>
-              <mat-option value="Gujrat">Gujrat</mat-option>
-              <mat-option value="Hariyana">Hariyana</mat-option>
-              <mat-option value="Himachal pradesh">Himachal pradesh</mat-option>
-              <mat-option value="Zarkhand">Zarkhand</mat-option>
-              <mat-option value="Karnataka">Karnataka</mat-option>
-              <mat-option value="Kerla">Kerla</mat-option>
-              <mat-option value="Madya Pradesh">Madya Pradesh</mat-option>
-              <mat-option value="Maharashtra">Maharashtra</mat-option>
-              <mat-option value="Manipur">Manipur</mat-option>
-              <mat-option value="Megalay">Megalay</mat-option>
-              <mat-option value="Mizoram">Mizoram</mat-option>
-              <mat-option value="Nagaland">Nagaland</mat-option>
-              <mat-option value="Odisha">Odisha</mat-option>
-              <mat-option value="Rajstan">Rajstan</mat-option>
-              <mat-option value="Sikkim">Sikkim</mat-option>
-              <mat-option value="Punjab">Punjab</mat-option>
-              <mat-option value="Tripura">Tripura</mat-option>
-              <mat-option value="TamilNadu">TamilNadu</mat-option>
-              <mat-option value="Uttarakhand">Uttarakhand</mat-option>
-              <mat-option value="West Bengal">West Bengal</mat-option>
-              
-            </mat-select>
-          </mat-form-field>
-
-          <mat-form-field style="width: 370px;">
-            <mat-label>Select your Country</mat-label>
-            <mat-select formControlName="country" placeholder="country">
-
-              <mat-option value="Australia">Australia</mat-option>
-              <mat-option value="Algeria">Algeria</mat-option>
-              <mat-option value="Argentina">Argentina</mat-option>
-              <mat-option value="Armenia">Armenia</mat-option>
-              <mat-option value="Afganistan">Afganistan</mat-option>
-              <mat-option value="Albania">Albania</mat-option>
-              <mat-option value="Andorra">Andorra</mat-option>
-              <mat-option value="Angola">Angola</mat-option>
-              <mat-option value="Bangladesh">Bangladesh</mat-option>
-              <mat-option value="China">China</mat-option>
-              <mat-option value="India">India</mat-option>
-              <mat-option value="Indonesia">Indonesia</mat-option>
-              <mat-option value="Bhutan">Bhutan</mat-option>
-              <mat-option value="Cyprus">Cyprus</mat-option>
-              <mat-option value="Barbados">Barbados</mat-option>
-              <mat-option value="Benin">Benin</mat-option>
-            </mat-select>
-          </mat-form-field>
-
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" id="form3Example9" formControlName="addr" class="form-control form-control-lg"
-              placeholder="Address" />
-              <!-- <div class="addd">
-                <input type="text"> <input type="text">
-              </div> -->
-
-          </div>
-
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" id="form3Example90" class="form-control form-control-lg" formControlName="tags" placeholder="tags" />
-           
-          </div>
-
-
-
-
-          <div class="d-flex justify-content-end pt-3">
-            <button type="button" style="border: 1px solid rgb(82, 79, 79); padding: 10px;" data-mdb-button-init
-              data-mdb-ripple-init class="btn btn-light btn-lg">Cancel</button>
-            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg ms-2"
-              (click)="submit()">Submit</button>
-          </div>
-
+<label for="inputField" class="text-primary">Upload Image Here</label>
+<input type="file"  #fileInput formControlName="img"  accept="image/*" (change)="onFileSelected($event)"  id="inputField" style="display:none">
         </div>
       </div>
-    </form>
-  </div>
+      <div class="col-md-8 my-4">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1m" class="form-control " formControlName="fName" placeholder="First Name" />
+               
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1n" class="form-control " formControlName="lName" placeholder="Last Name" />
+            </div>
+          </div>
+          <span class="col-md-6  text-danger" style="margin-top: -20px ; float: left;" >
+           <span *ngIf="this.registerFormData.get('fName')?.errors?.['required'] && this.registerFormData.get('fName')?.touched"> Required field</span>
+           <span *ngIf="!this.registerFormData.get('fName')?.errors?.['required'] && this.registerFormData.get('fName')?.errors?.['pattern']">Allow Only Alphabetic Characters</span>
+           <span *ngIf="!this.registerFormData.get('fName')?.errors?.['required'] && !this.registerFormData.get('fName')?.errors?.['pattern'] && this.registerFormData.get('fName')?.errors?.['maxlength']">Maximux 20 Character Allowed</span>
+          </span>
 
+        </div>
+
+
+
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" class="form-control " placeholder="Email" formControlName="email" />
+
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" class="form-control " placeholder="(541) 754-3010" formControlName="contact" />
+
+        </div>
+      Age: {{age? age :'20'}}
+        <mat-slider min="20" max="60" [(ngModel)]="age"  formControlName="age" step="1" showTickMarks discrete [displayWith]="formatLabel">
+          <input matSliderThumb>
+          
+        </mat-slider>
+   
+
+        <select class="form-select  mb-3" aria-label=".form-select-lg example" formControlName="state">
+          <option selected>State</option>
+          <option value="MH">MH</option>
+          <option value="GOA">GOA</option>
+          <option value="KA">KA</option>
+        </select>
+
+        <select class="form-select  mb-3" aria-label=".form-select-lg example" formControlName="country">
+          <option selected>Country</option>
+          <option value="india">India</option>
+          <option value="USA">USA</option>
+          <option value="spen">Spen</option>
+        </select>
+        <mat-form-field  class="dropdown-List" >
+          <mat-label>Address</mat-label>
+          <mat-select formControlName="address">
+            <mat-option value="home" (click)="address('home')">Home</mat-option>
+            <mat-option value="company" (click)="address('company')">Company</mat-option>
+           
+       
+          </mat-select>
+        </mat-form-field>
+       <fieldset formGroupName="homeAddress">
+        <div class="row" *ngIf="addressData=='home'" >
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1m" class="form-control " formControlName="address1" placeholder="Address 1" />
+
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1n" class="form-control  " placeholder="Address 2"  formControlName="address2" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset formGroupName="companyAddress">
+        <div class="row" *ngIf="addressData=='company'" >
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1m" class="form-control " formControlName="comAdd1" placeholder="Company Address 1" />
+
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1n" class="form-control    " formControlName="comAdd2" placeholder=" Company Address 2"  />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+        <div class="chips-container" id="chipsContainer" >
+          <input type="text" id="inputChip1" placeholder="Enter a chip"  formControlName="chips"  />
+          <button (click)="add()" class="add mx-3" >add</button>
+          
+      <div *ngFor="let data of tags" class="chip1">{{data}}  <span (click)="remove(data)">X</span></div>
+         
+        </div>
+        
+        
+
+     
+
+        <div class="d-flex justify-content-end pt-3">
+          <button type="button" style="border: 1px solid rgb(82, 79, 79); padding: 10px;" data-mdb-button-init
+            data-mdb-ripple-init class="btn btn-light " (click)="exit()">Cancel</button>
+          <button type="button" *ngIf="!editId" data-mdb-button-init data-mdb-ripple-init
+            class="btn btn-primary  ms-2" (click)="submit()" [disabled]="!this.registerFormData.valid">Submit</button>
+            <button type="button" *ngIf="editId" data-mdb-button-init data-mdb-ripple-init
+            class="btn btn-primary  ms-2 " (click)="edit(editId)">Edit</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
 </div>
+<br><br><br>
+
+
+
